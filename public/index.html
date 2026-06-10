@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Confidence Building Courses for Kids by Scoreazy – Empower your child to speak up, participate, and grow." />
+  <title>Confidence Building | Scoreazy Platform</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.0/mdb.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.0/mdb.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Pangolin&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- Premium Navigation Bar -->
+  <nav class="main-navbar">
+    <div class="nav-container">
+      <a href="/" class="brand-logo"><i class="fas fa-rocket me-2"></i>Scoreazy</a>
+      
+      <!-- Mobile Toggle Button -->
+      <button class="mobile-toggle" id="mobileMenuBtn">
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <!-- Sidebar Wrapper for Mobile -->
+      <div class="nav-menu-wrapper" id="navMenuWrapper">
+        <!-- Close button for mobile sidebar -->
+        <button class="mobile-close" id="mobileCloseBtn">&times;</button>
+        
+        <div class="nav-links">
+          <a href="#about">About</a>
+          <a href="#courses">Courses</a>
+          <a href="#faq">FAQs</a>
+          <a href="#testimonials">Testimonials</a>
+        </div>
+        <div class="nav-auth" id="navAuthSection">
+          <button class="btn-login" id="openLoginBtn"><i class="fas fa-sign-in-alt me-1"></i> Login</button>
+          <button class="btn-signup" id="openSignupBtn">Sign Up</button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="container">
+      <h1>Confidence Building for Kids</h1>
+      <p>Empower your child to speak up, participate, and grow all in just 1 week.</p>
+      <a href="#courses" class="cta-button">Browse Courses</a>
+    </div>
+  </header>
+
+  <!-- About Section -->
+  <section id="about" class="about-modern fade-in">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6 mb-4 mb-lg-0">
+          <div class="image-wrapper">
+            <img src="02.png" alt="About Microcourse" class="img-fluid rounded shadow-sm" />
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <p class="text-uppercase text-orange mb-2 fw-semibold">About Us</p>
+          <h2 class="fw-bold mb-3">Top Choice for Children</h2>
+          <p class="text-muted mb-4">
+            Our multi-day microcourses are designed for children of different age groups using proven methods in
+            educational psychology. Your child will grow more confident through fun games, guided stories, and
+            reflection activities.
+          </p>
+
+          <div class="row g-2 mb-4">
+            <div class="col-6 col-sm-6">
+              <div class="tag-box"> Confidence Building</div>
+            </div>
+            <div class="col-6 col-sm-6">
+              <div class="tag-box"> Public Speaking</div>
+            </div>
+            <div class="col-6 col-sm-6">
+              <div class="tag-box"> Social Skills</div>
+            </div>
+            <div class="col-6 col-sm-6">
+              <div class="tag-box">Creative Thinking</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Confidence Assessment Quiz Section -->
+  <section id="quiz-section" class="quiz-section fade-in">
+    <div class="container">
+      <div class="quiz-card">
+        <div class="quiz-header text-center">
+          <span class="quiz-badge"><i class="fas fa-magic"></i> Recommendation Quiz</span>
+          <h2>Find the Perfect Course for Your Child</h2>
+          <p>Answer 4 quick questions to get a customized confidence-building learning recommendation.</p>
+        </div>
+
+        <div class="quiz-wizard" id="quizWizard">
+          <!-- Progress Bar -->
+          <div class="quiz-progress-bar">
+            <div class="progress-fill" id="quizProgress" style="width: 25%;"></div>
+          </div>
+          <div class="quiz-steps-indicators mb-4">
+            <span class="step-dot active" data-step="1">1</span>
+            <span class="step-dot" data-step="2">2</span>
+            <span class="step-dot" data-step="3">3</span>
+            <span class="step-dot" data-step="4">4</span>
+          </div>
+
+          <!-- Step 1: Age group -->
+          <div class="quiz-step active" id="step1">
+            <h4 class="quiz-question">1. What grade level or age group is your child in?</h4>
+            <div class="quiz-options">
+              <div class="quiz-option" data-value="K-2" data-name="age">
+                <div class="option-icon"><i class="fas fa-child"></i></div>
+                <div class="option-text">
+                  <h5>Grades K-2</h5>
+                  <p>Ages 5-8 (Early childhood & play-based sharing)</p>
+                </div>
+              </div>
+              <div class="quiz-option" data-value="3-5" data-name="age">
+                <div class="option-icon"><i class="fas fa-users-line"></i></div>
+                <div class="option-text">
+                  <h5>Grades 3-5</h5>
+                  <p>Ages 8-11 (Expressive speech & social circles)</p>
+                </div>
+              </div>
+              <div class="quiz-option" data-value="6-8" data-name="age">
+                <div class="option-icon"><i class="fas fa-user-graduate"></i></div>
+                <div class="option-text">
+                  <h5>Grades 6-8</h5>
+                  <p>Ages 11-14 (Leadership, presentation, & debate)</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 2: Main challenge -->
+          <div class="quiz-step d-none" id="step2">
+            <h4 class="quiz-question">2. What is the primary communication goal for your child?</h4>
+            <div class="quiz-options">
+              <div class="quiz-option" data-value="express" data-name="goal">
+                <div class="option-icon"><i class="fas fa-theater-masks"></i></div>
+                <div class="option-text">
+                  <h5>Expressiveness & Voice Acting</h5>
+                  <p>Improve vocal variety, body language, and creative storytelling.</p>
+                </div>
+              </div>
+              <div class="quiz-option" data-value="social" data-name="goal">
+                <div class="option-icon"><i class="fas fa-comments"></i></div>
+                <div class="option-text">
+                  <h5>Social Connections & Empathy</h5>
+                  <p>Make new friends, practice active listening, and share easily.</p>
+                </div>
+              </div>
+              <div class="quiz-option" data-value="debate" data-name="goal">
+                <div class="option-icon"><i class="fas fa-scale-balanced"></i></div>
+                <div class="option-text">
+                  <h5>Structured Arguing & Critical Thinking</h5>
+                  <p>Formulate logical arguments and respectfully handle disagreements.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 3: Speaking comfort -->
+          <div class="quiz-step d-none" id="step3">
+            <h4 class="quiz-question">3. How does your child react when speaking in front of peers?</h4>
+            <div class="quiz-options">
+              <div class="quiz-option" data-value="shy" data-name="comfort">
+                <div class="option-icon"><i class="fas fa-face-grimace"></i></div>
+                <div class="option-text">
+                  <h5>Very Shy / Avoids Speaking</h5>
+                  <p>Gets nervous, stands back, or stays quiet during discussions.</p>
+                </div>
+              </div>
+              <div class="quiz-option" data-value="medium" data-name="comfort">
+                <div class="option-icon"><i class="fas fa-hourglass-half"></i></div>
+                <div class="option-text">
+                  <h5>Hesitant but Tries</h5>
+                  <p>Answers when called on, but doesn't volunteer ideas voluntarily.</p>
+                </div>
+              </div>
+              <div class="quiz-option" data-value="active" data-name="comfort">
+                <div class="option-icon"><i class="fas fa-face-smile-beam"></i></div>
+                <div class="option-text">
+                  <h5>Expressive but Needs Focus</h5>
+                  <p>Loves talking but wants to learn structured debate or formal presenting.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 4: Learning style preference -->
+          <div class="quiz-step d-none" id="step4">
+            <h4 class="quiz-question">4. What type of activity engages your child the most?</h4>
+            <div class="quiz-options">
+              <div class="quiz-option" data-value="story" data-name="style">
+                <div class="option-icon"><i class="fas fa-book-open"></i></div>
+                <div class="option-text">
+                  <h5>Storytelling & Imagination</h5>
+                  <p>Acting out characters, fantasy stories, and creative writing.</p>
+                </div>
+              </div>
+              <div class="quiz-option" data-value="play" data-name="style">
+                <div class="option-icon"><i class="fas fa-gamepad"></i></div>
+                <div class="option-text">
+                  <h5>Games & Peer Discussions</h5>
+                  <p>Collaborating, sharing toys/ideas, and group play.</p>
+                </div>
+              </div>
+              <div class="quiz-option" data-value="logic" data-name="style">
+                <div class="option-icon"><i class="fas fa-brain"></i></div>
+                <div class="option-text">
+                  <h5>Debates & Problem Solving</h5>
+                  <p>Answering riddles, defending ideas, and logical reasoning.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Result Screen (Hidden) -->
+          <div class="quiz-result-screen d-none" id="quizResultScreen">
+            <div class="text-center py-4">
+              <div class="recommended-card">
+                <div class="sparkle-badge"><i class="fas fa-magic"></i> PERFECT MATCH</div>
+                <h3 id="recCourseTitle">Confidence Builders</h3>
+                <span id="recCourseAge" class="age-badge 3-5">Grades 3-5</span>
+                <p id="recCourseDesc" class="mt-3 text-muted">Empower elementary students to speak up, participate in
+                  discussions, and share ideas confidently using proven techniques in educational psychology.</p>
+                <div class="d-flex justify-content-center gap-3 mt-4">
+                  <button class="btn-enroll-card" id="recViewDetailsBtn">View Syllabus & Enroll</button>
+                  <button class="btn-login" id="recRestartBtn" style="border-color: #666; color: #666;">Retake
+                    Quiz</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Navigation buttons -->
+          <div class="quiz-nav-btns mt-4 d-flex justify-content-between">
+            <button class="btn-login d-none" id="quizPrevBtn"><i class="fas fa-chevron-left me-1"></i> Back</button>
+            <span class="flex-grow-1"></span>
+            <button class="btn-signup" id="quizNextBtn" disabled>Next <i class="fas fa-chevron-right ms-1"></i></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Dynamic Courses Section (Age-based Catalog) -->
+  <section id="courses" class="courses-section fade-in">
+    <div class="container">
+      <h2 class="section-title text-center mb-2">Empowerment Programs by Age Group</h2>
+      <p class="section-subtitle text-center mb-4">Select a microcourse customized for your child's age and
+        developmental milestones.</p>
+
+      <!-- Interactive Filter Bar -->
+      <div class="filter-bar mb-4">
+        <div class="row g-3 align-items-center justify-content-between">
+          <div class="col-md-5">
+            <div class="search-input-wrapper">
+              <i class="fas fa-search search-icon"></i>
+              <input type="text" id="courseSearch" class="form-control"
+                placeholder="Search courses (e.g. Debate, Storyteller, Safari)...">
+            </div>
+          </div>
+          <div class="col-md-7">
+            <div class="filter-controls d-flex gap-3 justify-content-md-end">
+              <div class="filter-group d-flex align-items-center gap-2">
+                <label for="filterAge" class="small mb-0 text-muted" style="white-space: nowrap;"><i
+                    class="fas fa-filter"></i> Age:</label>
+                <select id="filterAge" class="form-select-custom">
+                  <option value="all">All Ages</option>
+                  <option value="k-2">Grades K-2</option>
+                  <option value="3-5">Grades 3-5</option>
+                  <option value="6-8">Grades 6-8</option>
+                </select>
+              </div>
+              <div class="filter-group d-flex align-items-center gap-2">
+                <label for="sortPrice" class="small mb-0 text-muted" style="white-space: nowrap;"><i
+                    class="fas fa-sort"></i> Sort:</label>
+                <select id="sortPrice" class="form-select-custom">
+                  <option value="default">Default</option>
+                  <option value="low-high">Price: Low to High</option>
+                  <option value="high-low">Price: High to Low</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Dynamic grid populated via backend API -->
+      <div class="courses-grid" id="coursesGrid">
+        <div class="loading-spinner">
+          <i class="fas fa-circle-notch fa-spin"></i> Loading courses...
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="stats fade-in">
+    <div class="container">
+      <h2>Why Trust Scoreazy?</h2>
+      <div class="stats-grid">
+        <div class="stat-box"><i class="fas fa-users stat-icon"></i>
+          <h3>5K+</h3>
+          <p>Happy Students</p>
+        </div>
+        <div class="stat-box"><i class="fas fa-chalkboard-teacher stat-icon"></i>
+          <h3>300+</h3>
+          <p>Trained Mentors</p>
+        </div>
+        <div class="stat-box"><i class="fas fa-book-open stat-icon"></i>
+          <h3>100+</h3>
+          <p>Courses Created</p>
+        </div>
+        <div class="stat-box"><i class="fas fa-globe stat-icon"></i>
+          <h3>25+</h3>
+          <p>Cities Served</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section id="faq" class="faq-section fade-in">
+    <div class="container">
+      <h2>FAQs</h2>
+      <div class="accordion" id="faqAccordion">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingOne">
+            <button class="accordion-button collapsed" type="button" data-mdb-toggle="collapse"
+              data-mdb-target="#faqOne" aria-expanded="false" aria-controls="faqOne">
+              Who is this course for?
+            </button>
+          </h2>
+          <div id="faqOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+            data-mdb-parent="#faqAccordion">
+            <div class="accordion-body">
+              Students in Grades K–8 (divided into age bands) who want to boost their confidence and communication
+              skills.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingTwo">
+            <button class="accordion-button collapsed" type="button" data-mdb-toggle="collapse"
+              data-mdb-target="#faqTwo" aria-expanded="false" aria-controls="faqTwo">
+              Is it online or offline?
+            </button>
+          </h2>
+          <div id="faqTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+            data-mdb-parent="#faqAccordion">
+            <div class="accordion-body">
+              It’s a fully online course with live sessions and fun activities.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingThree">
+            <button class="accordion-button collapsed" type="button" data-mdb-toggle="collapse"
+              data-mdb-target="#faqThree" aria-expanded="false" aria-controls="faqThree">
+              Can parents attend too?
+            </button>
+          </h2>
+          <div id="faqThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+            data-mdb-parent="#faqAccordion">
+            <div class="accordion-body">
+              Parents receive a daily summary, but sessions are for kids only.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action Section -->
+  <section class="cta fade-in" id="enroll">
+    <div class="container cta-flex">
+      <div class="cta-left">
+        <p class="cta-subtitle" style="color:#e8883d;">Get Your Quality</p>
+        <h2 class="cta-heading">Come And Be Part Of <br>Our Latest Session</h2>
+        <a href="#courses" class="cta-button">Apply Now</a>
+      </div>
+      <div class="cta-right">
+        <div class="image-stack">
+          <img src="cta-shape.png" alt="Decoration" class="bg-image">
+          <img src="cta-2.png" alt="Girl with certificate" class="main-image">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="testimonials fade-in">
+    <div class="container">
+      <h2 class="testimonial-heading">Parents' Words Are The Key To Happy Kids</h2>
+    </div>
+    <div class="testimonial-carousel">
+      <div class="testimonial-card" style="background-color: #70a6b1;">
+        <p>“My daughter is now more confident and speaks up in class!”</p>
+        <div class="author">— Aanya's Mom</div>
+      </div>
+      <div class="testimonial-card" style="background-color: #f39f5f;">
+        <p>“An engaging and fun course that really works.”</p>
+        <div class="author">— Rohan's Dad</div>
+      </div>
+      <div class="testimonial-card" style="background-color: #385469;">
+        <p>“My son couldn’t wait to join the next session!”</p>
+        <div class="author">— Kavita S.</div>
+      </div>
+      <div class="testimonial-card" style="background-color: #70a6b1;">
+        <p>“My daughter is now more confident and speaks up in class!”</p>
+        <div class="author">— Aanya's Mom</div>
+      </div>
+      <div class="testimonial-card" style="background-color: #f39f5f;">
+        <p>“An engaging and fun course that really works.”</p>
+        <div class="author">— Rohan's Dad</div>
+      </div>
+      <div class="testimonial-card" style="background-color: #385469;">
+        <p>“My son couldn’t wait to join the next session!”</p>
+        <div class="author">— Kavita S.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-grid">
+        <div>
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#courses">Courses</a></li>
+            <li><a href="#faq">FAQs</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Programs</h4>
+          <ul>
+            <li><a href="#courses">Grades K-2</a></li>
+            <li><a href="#courses">Grades 3-5</a></li>
+            <li><a href="#courses">Grades 6-8</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Refund Policy</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Subscribe to our newsletter</h4>
+          <p>Monthly digest of what's new and exciting from us.</p>
+          <input type="email" placeholder="Email address" />
+          <button class="subscribe-btn">Subscribe</button>
+        </div>
+      </div>
+      <p class="copyright">© 2026 Scoreazy. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- ================= MODALS & SLIDE-OUT PANELS ================= -->
+
+  <!-- AUTHENTICATION MODAL (Login/Signup Combo) -->
+  <div class="glass-modal" id="authModal">
+    <div class="modal-content-wrapper">
+      <button class="modal-close" id="closeAuthBtn"><i class="fas fa-times"></i></button>
+
+      <!-- Tab Controls -->
+      <div class="auth-tabs">
+        <button class="auth-tab-btn active" id="tabLoginBtn">Login</button>
+        <button class="auth-tab-btn" id="tabSignupBtn">Sign Up</button>
+      </div>
+
+      <!-- Login Form -->
+      <form id="loginForm" class="auth-form">
+        <h3 class="form-title">Welcome Back</h3>
+        <p class="form-subtitle">Log in to manage your child's courses</p>
+
+        <div class="form-group">
+          <label for="loginEmail"><i class="fas fa-envelope"></i> Email Address</label>
+          <input type="email" id="loginEmail" placeholder="parent@example.com" required>
+        </div>
+        <div class="form-group">
+          <label for="loginPassword"><i class="fas fa-lock"></i> Password</label>
+          <input type="password" id="loginPassword" placeholder="••••••••" required>
+        </div>
+
+        <div class="form-error-msg" id="loginError"></div>
+        <button type="submit" class="btn-submit">Sign In <i class="fas fa-arrow-right ms-2"></i></button>
+      </form>
+
+      <!-- Signup Form (Hidden initially) -->
+      <form id="signupForm" class="auth-form d-none">
+        <h3 class="form-title">Create Account</h3>
+        <p class="form-subtitle">Start your child's confidence building journey</p>
+
+        <div class="form-group">
+          <label for="signupName"><i class="fas fa-user"></i> Full Name</label>
+          <input type="text" id="signupName" placeholder="Your Name" required>
+        </div>
+        <div class="form-group">
+          <label for="signupEmail"><i class="fas fa-envelope"></i> Email Address</label>
+          <input type="email" id="signupEmail" placeholder="parent@example.com" required>
+        </div>
+        <div class="form-group">
+          <label for="signupPassword"><i class="fas fa-lock"></i> Password</label>
+          <input type="password" id="signupPassword" placeholder="Minimum 6 characters" required>
+        </div>
+
+        <div class="form-error-msg" id="signupError"></div>
+        <button type="submit" class="btn-submit">Create Account <i class="fas fa-user-plus ms-2"></i></button>
+      </form>
+    </div>
+  </div>
+
+  <!-- CHECKOUT & ENROLLMENT MODAL (Simulated Billing) -->
+  <div class="glass-modal" id="checkoutModal">
+    <div class="modal-content-wrapper modal-lg">
+      <button class="modal-close" id="closeCheckoutBtn"><i class="fas fa-times"></i></button>
+      <h3 class="form-title mb-1"><i class="fas fa-graduation-cap me-2 text-orange"></i>Course Enrollment</h3>
+      <p class="form-subtitle mb-4">Complete details & secure billing validation to enroll.</p>
+
+      <form id="enrollmentForm">
+        <input type="hidden" id="checkoutCourseId">
+
+        <div class="row">
+          <!-- Left: Kid details -->
+          <div class="col-md-6 border-end-divider">
+            <h5 class="form-section-title">Student Information</h5>
+            <div class="form-group">
+              <label for="childName"><i class="fas fa-child"></i> Kid's Name</label>
+              <input type="text" id="childName" placeholder="e.g. Leo Smith" required>
+            </div>
+            <div class="form-group">
+              <label for="childAge"><i class="fas fa-birthday-cake"></i> Kid's Age</label>
+              <input type="number" id="childAge" placeholder="e.g. 9" min="3" max="18" required>
+            </div>
+            <div class="course-summary-card mt-4">
+              <h6>Selected Course</h6>
+              <p class="fw-bold text-orange mb-0" id="summaryCourseTitle">Confidence Builders</p>
+              <p class="small text-muted mb-2" id="summaryCourseAge">Grades 3-5</p>
+              <div class="d-flex justify-content-between border-top pt-2">
+                <span>Tuition:</span>
+                <span class="fw-bold" id="summaryCoursePrice">$49.00</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Simulated billing -->
+          <div class="col-md-6 ps-md-4">
+            <h5 class="form-section-title">Billing & Payment</h5>
+            <div class="form-group">
+              <label for="cardName"><i class="fas fa-user-check"></i> Cardholder Name</label>
+              <input type="text" id="cardName" placeholder="John Smith" required>
+            </div>
+            <div class="form-group">
+              <label for="cardNumber"><i class="fas fa-credit-card"></i> Card Number</label>
+              <input type="text" id="cardNumber" placeholder="1234 5678 1234 5678" pattern="^(?:\s*\d\s*){16}$"
+                title="Must be exactly 16 digits (spaces allowed)" required>
+            </div>
+            <div class="row">
+              <div class="col-6">
+                <div class="form-group">
+                  <label for="cardExpiry">Expiry Date</label>
+                  <input type="text" id="cardExpiry" placeholder="MM/YY" required>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="form-group">
+                  <label for="cardCvv">CVV</label>
+                  <input type="text" id="cardCvv" placeholder="123" pattern="\d{3}" title="3 digit CVV" required>
+                </div>
+              </div>
+            </div>
+            <div class="payment-guarantee mb-3">
+              <i class="fas fa-shield-alt text-success me-1"></i> Secure simulated validation environment. No real funds
+              charged.
+            </div>
+            <div class="form-error-msg" id="checkoutError"></div>
+            <button type="submit" class="btn-submit btn-orange mt-2 w-100">Pay & Enroll <i
+                class="fas fa-check-circle ms-2"></i></button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- PARENT DASHBOARD DRAWER / SLIDE-OUT PANEL -->
+  <div class="dashboard-panel" id="dashboardPanel">
+    <div class="panel-header">
+      <h4><i class="fas fa-chart-line me-2"></i>Parent Dashboard</h4>
+      <button class="panel-close" id="closeDashboardBtn"><i class="fas fa-times"></i></button>
+    </div>
+
+    <div class="panel-body">
+      <!-- Welcome block -->
+      <div class="welcome-card mb-4">
+        <h5>Hello, <span id="dashboardParentName">Parent</span>!</h5>
+        <p class="small text-white-50 mb-0">Track your kids' growth and access billing information.</p>
+      </div>
+
+      <!-- Tabs inside dashboard -->
+      <div class="dashboard-tabs mb-3">
+        <button class="dash-tab-btn active" id="dashTabCoursesBtn"><i class="fas fa-graduation-cap me-1"></i>
+          Enrollments</button>
+        <button class="dash-tab-btn" id="dashTabBillingBtn"><i class="fas fa-receipt me-1"></i> Invoices</button>
+      </div>
+
+      <!-- Tab 1: Enrollments -->
+      <div id="dashEnrollmentsSec">
+        <div class="enrollment-list" id="dashboardEnrollmentList">
+          <p class="text-muted text-center py-4">No active enrollments yet. Browse courses to get started!</p>
+        </div>
+      </div>
+
+      <!-- Tab 2: Billing invoices -->
+      <div id="dashBillingSec" class="d-none">
+        <div class="billing-list" id="dashboardInvoiceList">
+          <p class="text-muted text-center py-4">No payment transactions found.</p>
+        </div>
+      </div>
+
+      <!-- Tab 3: Classroom Area (Hidden by default, shown when user clicks 'Go to Classroom') -->
+      <div id="dashClassroomSec" class="d-none">
+        <div class="classroom-header mb-3">
+          <button class="btn-back-dashboard mb-2" id="backToEnrollmentsBtn"><i class="fas fa-arrow-left me-1"></i> Back
+            to Courses</button>
+          <h5 class="fw-bold" id="classroomCourseTitle">Confidence Builders</h5>
+          <p class="small text-muted" id="classroomChildName">Child: Leo Smith</p>
+        </div>
+        <div class="classroom-body">
+          <div class="progress-card mb-4">
+            <span class="small fw-semibold text-muted">Overall Course Progress</span>
+            <div class="d-flex align-items-center gap-2 mt-1">
+              <div class="progress-bar-bg flex-grow-1" style="height: 12px;">
+                <div class="progress-bar-fill" id="classroomProgressFill"
+                  style="width: 20%; background-color: #f39f5f;"></div>
+              </div>
+              <span class="fw-bold small" id="classroomProgressPercent">20%</span>
+            </div>
+            <!-- Certificate prompt -->
+            <div class="certificate-alert mt-3 p-3 bg-light rounded text-center d-none" id="classroomCertSection">
+              <p class="small mb-2 fw-semibold text-success"><i class="fas fa-medal me-1"></i> Course Completed!
+                Graduation Badge unlocked.</p>
+              <button class="btn-submit btn-orange btn-sm w-100" id="downloadCertBtn"><i
+                  class="fas fa-download me-1"></i> View & Print Certificate</button>
+            </div>
+          </div>
+
+          <h6 class="fw-bold mb-3"><i class="fas fa-list-check me-2"></i>Daily Interactive Exercises</h6>
+          <div class="classroom-days-accordion" id="classroomDaysList">
+            <!-- Day list populated dynamically: parents mark day tasks as complete -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- COURSE DETAILS & SYLLABUS MODAL -->
+  <div class="glass-modal" id="detailsModal">
+    <div class="modal-content-wrapper modal-md">
+      <button class="modal-close" id="closeDetailsBtn"><i class="fas fa-times"></i></button>
+
+      <div class="details-modal-header mb-4">
+        <span class="age-badge k-2" id="detailsCourseAge">Grades K-2</span>
+        <h3 class="form-title mt-2" id="detailsCourseTitle">Confidence Explorers</h3>
+        <p class="text-muted" id="detailsCourseDesc">Introduce your little ones to the basics of self-expression,
+          sharing, and overcoming shyness through colorful games, interactive puppets, and storytelling.</p>
+      </div>
+
+      <div class="details-syllabus-section">
+        <h5 class="form-section-title"><i class="fas fa-calendar-day me-2 text-orange"></i>5-Day Microcourse Syllabus
+        </h5>
+        <div class="syllabus-days-list" id="detailsSyllabusDays">
+          <!-- Filled dynamically via app.js -->
+        </div>
+      </div>
+
+      <div class="details-modal-footer d-flex justify-content-between align-items-center mt-4 pt-3 border-top">
+        <div class="price-block">
+          <span class="small text-muted d-block">Tuition fee</span>
+          <span class="fw-bold fs-4 text-dark" id="detailsCoursePrice">$29.00</span>
+        </div>
+        <button class="btn-submit btn-orange px-4" id="detailsEnrollBtn">Proceed to Enroll <i
+            class="fas fa-arrow-right ms-2"></i></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- CERTIFICATE OF COMPLETION MODAL -->
+  <div class="glass-modal" id="certificateModal">
+    <div class="modal-content-wrapper modal-lg text-center" style="max-width: 600px;">
+      <button class="modal-close" id="closeCertBtn"><i class="fas fa-times"></i></button>
+
+      <!-- Styled Certificate Area -->
+      <div class="certificate-border p-3">
+        <div class="certificate-inner-border p-4">
+          <div class="cert-header">
+            <i class="fas fa-award text-orange fa-3x mb-2"></i>
+            <h2 class="cert-main-title">Certificate of Completion</h2>
+            <p class="cert-subtitle">SCOREAZY CONFIDENCE MICROCOURSE</p>
+          </div>
+
+          <div class="cert-body my-4">
+            <p class="cert-text">This is proudly presented to</p>
+            <h3 class="cert-student-name" id="certChildName">Leo Smith</h3>
+            <p class="cert-text">for successfully completing the 5-day enrichment course</p>
+            <h4 class="cert-course-name" id="certCourseTitle">Confidence Builders</h4>
+            <p class="cert-text mt-3">demonstrating growth in self-expression, active listening, and public speaking.
+            </p>
+          </div>
+
+          <div class="cert-footer d-flex justify-content-between align-items-center mt-4 pt-3 border-top">
+            <div class="cert-sig text-center">
+              <span class="sig-name">Scoreazy Mentors</span>
+              <div class="sig-line" style="width: 120px; height: 1px; background: #ccc; margin: 4px auto;"></div>
+              <span class="sig-label" style="font-size: 0.75rem; color: #999;">Authorized Signature</span>
+            </div>
+            <div class="cert-date text-center">
+              <span class="date-val" id="certDate">June 9, 2026</span>
+              <div class="sig-line" style="width: 120px; height: 1px; background: #ccc; margin: 4px auto;"></div>
+              <span class="sig-label" style="font-size: 0.75rem; color: #999;">Date Completed</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-4">
+        <button class="btn-submit btn-orange px-4" id="printCertBtn"><i class="fas fa-print me-2"></i>Print
+          Certificate</button>
+        <p class="small text-muted mt-2">Hint: You can also choose 'Save as PDF' in your browser print settings to
+          download.</p>
+      </div>
+    </div>
+  </div>
+  <!-- END CERTIFICATE MODAL -->
+
+  <!-- FLOATING AI SUPPORT CHATBOT -->
+  <div class="chat-widget-container">
+      <!-- Chat Toggle Button (FAB) -->
+      <button class="chat-toggle-btn" id="chatToggleBtn" title="Ask Dr. Lily, AI Confidence Advisor">
+        <i class="fas fa-comment-dots"></i>
+        <span class="chat-badge-pulse"></span>
+      </button>
+
+      <!-- Chat Window Card -->
+      <div class="chat-window shadow" id="chatWindow">
+        <div class="chat-header d-flex justify-content-between align-items-center">
+          <div class="d-flex align-items-center gap-2">
+            <div class="chat-avatar">
+              <i class="fas fa-user-md"></i>
+              <span class="online-indicator"></span>
+            </div>
+            <div>
+              <h6 class="mb-0 fw-bold text-white">Dr. Lily</h6>
+              <span class="chat-status-text">AI Confidence Advisor</span>
+            </div>
+          </div>
+          <button class="chat-close-btn" id="closeChatBtn" title="Minimize Chat"><i
+              class="fas fa-chevron-down"></i></button>
+        </div>
+
+        <!-- Chat Feed Messages -->
+        <div class="chat-messages" id="chatMessages">
+          <div class="msg bot">
+            <div class="msg-bubble">
+              Hello! I'm <strong>Dr. Lily</strong>, your AI Confidence Mentor at Scoreazy. 🌟 How can I help you support
+              your child's communication journey today?
+            </div>
+          </div>
+          <!-- Quick replies list -->
+          <div class="quick-replies-wrapper mt-3">
+            <span class="small text-muted d-block mb-1"><i class="fas fa-lightbulb"></i> Suggested Questions:</span>
+            <div class="quick-reply-pills">
+              <button class="quick-reply-pill" data-query="recommend a course">Which course suits my kid?</button>
+              <button class="quick-reply-pill" data-query="prices">How much is tuition?</button>
+              <button class="quick-reply-pill" data-query="overcoming shyness">How to help a shy child?</button>
+              <button class="quick-reply-pill" data-query="what is the syllabus">Show me the syllabus</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Chat Input Area -->
+        <form class="chat-input-area" id="chatInputForm">
+          <input type="text" id="chatInput" placeholder="Type a message..." required autocomplete="off">
+          <button type="submit" id="sendChatBtn" title="Send message"><i class="fas fa-paper-plane"></i></button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Javascript Logic -->
+    <script src="app.js"></script>
+    <script>
+      // Fade-in animation controller on scroll
+      const faders = document.querySelectorAll('.fade-in');
+      const appearOptions = {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px"
+      };
+
+      const appearOnScroll = new IntersectionObserver(function (entries, observer) {
+        entries.forEach(entry => {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add('appear');
+          observer.unobserve(entry.target);
+        });
+      }, appearOptions);
+
+      faders.forEach(fader => {
+        appearOnScroll.observe(fader);
+      });
+
+      // Carousel script
+      const totalCards = document.querySelectorAll('.testimonial-card').length;
+      let currentIndex = 0;
+      const carousel = document.querySelector('.testimonial-carousel');
+
+      function showNextCard() {
+        if (!carousel) return;
+        currentIndex = (currentIndex + 1) % (totalCards / 2 || 3);
+        carousel.style.transform = `translateX(-${currentIndex * 320}px)`;
+      }
+
+      setInterval(showNextCard, 4000);
+    </script>
+</body>
+
+</html>
